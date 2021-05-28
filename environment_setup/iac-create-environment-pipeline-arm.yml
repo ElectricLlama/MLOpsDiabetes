@@ -23,6 +23,8 @@ variables:
     value: basic
 
 steps:
+  - script: |
+      echo "$(RESOURCE_GROUP)"
   - task: AzureResourceGroupDeployment@2
     inputs:
       azureSubscription: "$(AZURE_RM_SVC_CONNECTION)"
